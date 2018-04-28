@@ -9,6 +9,16 @@ h2, h1, p {
   margin: 0;
 }
 
+.card {
+  background: grey;
+  border-radius: 5px;
+  border: 1px solid #2f2f2f;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 1;
+  padding: 5vw 0;
+  width: 90%;
+}
+
 .nav > a {
   display: flex;
   justify-content: space-around;
@@ -19,6 +29,7 @@ h2, h1, p {
 }
 
 .nav {
+  z-index: 2;
   position: fixed;
   display: none;
   bottom: 0;
@@ -63,8 +74,8 @@ h2, h1, p {
 }
 
 #bio {
-  padding: 2vw 0;
-  background: #000;
+  padding: 10vw 0;
+  background: linear-gradient(#000 60%, #2f2f2f);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,35 +99,53 @@ h2, h1, p {
   width: 80vw;
 }
 
+.title {
+  font-size: 2em;
+  color: white;
+  font-weight: 300;
+}
+
 #projects {
+  padding-top: 10vh;
   background: #2f2f2f;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#projects > div {
+#projects > div, #experience > div {
   margin: 5vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
+  font-weight: 300;
 }
 
-#projects > div > img {
+#projects > div > img, #experience > div > img {
   width: 80vw;
 }
 
-#projects > div > h1 {
+#projects > div > h1, #experience > div > h1 {
   text-align: center;
 }
 
-#projects > div > p {
+#projects > div > p, #experience > div > p {
+  padding-top: 2vh;
   margin: 0 10vw;
   text-align: center;
 }
 
+#projects > div > h2, #experience > div > h2 {
+  font-size: 1em;
+}
+
 #experience {
-  background: grey;
+  padding-top: 10vh;
+  background: #2f2f2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #skills {
