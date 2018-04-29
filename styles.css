@@ -9,6 +9,10 @@ h2, h1, p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .card {
   background: grey;
   border-radius: 5px;
@@ -26,6 +30,28 @@ h2, h1, p {
   font-size: 2em;
   margin: 3vh 0;
   color: #2f2f2f;
+}
+
+.test {
+  background: #2f2f2f;
+}
+
+.header {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header > a {
+  font-size: 1.5em;
+  position: fixed;
+  left: 2.5vw;
+  color: black;
+}
+
+.header > h1 {
+  text-align: center;
 }
 
 .nav {
@@ -73,7 +99,7 @@ h2, h1, p {
   color: grey;
 }
 
-#bio {
+#aboutme {
   padding: 10vw 0;
   background: linear-gradient(#000 60%, #2f2f2f);
   display: flex;
@@ -81,7 +107,7 @@ h2, h1, p {
   align-items: center;
 }
 
-#bio > p {
+#aboutme > p {
   padding: 2vw 5vw;
   text-align: center;
   font-size: 1.2em;
@@ -90,7 +116,7 @@ h2, h1, p {
   color: white;
 }
 
-#bio > h1 {
+#aboutme > h1 {
   color: white;
   font-weight: 300;
 }
@@ -113,7 +139,7 @@ h2, h1, p {
   align-items: center;
 }
 
-#projects > div, #experience > div {
+#projects > a, #experience > a {
   margin: 5vh 0;
   display: flex;
   flex-direction: column;
@@ -122,21 +148,21 @@ h2, h1, p {
   font-weight: 300;
 }
 
-#projects > div > img, #experience > div > img {
+#projects > a > img, #experience > a > img {
   width: 80vw;
 }
 
-#projects > div > h1, #experience > div > h1 {
+#projects > a > h1, #experience > a > h1 {
   text-align: center;
 }
 
-#projects > div > p, #experience > div > p {
+#projects > a > p, #experience > a > p {
   padding-top: 2vh;
   margin: 0 10vw;
   text-align: center;
 }
 
-#projects > div > h2, #experience > div > h2 {
+#projects > a > h2, #experience > a > h2 {
   font-size: 1em;
 }
 
