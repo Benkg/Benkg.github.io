@@ -17,4 +17,8 @@ $(document).ready(function(){
     $(".nav").css("display", "none");
   })
 
+  $(window).scroll(function(){
+    $(".title").css("top",Math.max(0,250-$(this).scrollTop()));
+  });
+
 })

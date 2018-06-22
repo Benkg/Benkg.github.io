@@ -1,3 +1,7 @@
+/*===============*/
+/* General stuff */
+/*===============*/
+
 html, body {
   margin: 0;
   padding: 0;
@@ -25,6 +29,19 @@ a {
   width: 90%;
 }
 
+.title {
+  font-size: 2em;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* MAIN PAGE */
+
+/*=================*/
+/* Navigation Menu */
+/*=================*/
+
 .nav > a {
   display: flex;
   justify-content: space-around;
@@ -32,29 +49,6 @@ a {
   font-size: 2em;
   margin: 3vh 0;
   color: #2f2f2f;
-}
-
-.test {
-  background: #2f2f2f;
-}
-
-.header {
-  background: grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.header > a {
-  font-size: 1.5em;
-  position: fixed;
-  left: 2.5vw;
-  color: black;
-}
-
-.header > h1 {
-  text-align: center;
 }
 
 .nav {
@@ -65,10 +59,6 @@ a {
   width: 80vw;
   height: 100vh;
   background: grey;
-}
-
-.signature {
-  width: 70vw;
 }
 
 .nav-signature {
@@ -83,6 +73,14 @@ a {
   z-index: 2;
   font-size: 3em;
   color: white;
+}
+
+/*==============*/
+/* Landing Page */
+/*==============*/
+
+.signature {
+  width: 70vw;
 }
 
 #landing {
@@ -101,6 +99,10 @@ a {
   font-weight: 300;
   color: grey;
 }
+
+/*===============*/
+/* About Me Page */
+/*===============*/
 
 #aboutme {
   padding: 10vw 0;
@@ -128,13 +130,11 @@ a {
   width: 80vw;
 }
 
-.title {
-  font-size: 2em;
-  color: white;
-  font-weight: 300;
-}
+/*===============================*/
+/* Projects and Experience Pages */
+/*===============================*/
 
-#projects {
+#projects, #experience, #skills {
   padding-top: 10vh;
   background: #2f2f2f;
   display: flex;
@@ -155,10 +155,6 @@ a {
   width: 80vw;
 }
 
-#projects > a > h1, #experience > a > h1 {
-  text-align: center;
-}
-
 #projects > a > p, #experience > a > p {
   padding-top: 2vh;
   margin: 0 10vw;
@@ -169,14 +165,81 @@ a {
   font-size: 1em;
 }
 
-#experience {
-  padding-top: 10vh;
-  background: #2f2f2f;
+/*=============*/
+/* Contact  Me */
+/*=============*/
+
+#contact {
+  padding: 10vw 0;
+  background: linear-gradient(#fff);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#skills {
+#contact > img {
+  display: none;
+}
+
+#contact > .title {
+  color: black;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    padding: 20px;
+}
+
+/*=============*/
+/* OTHER PAGES */
+/*=============*/
+
+.test {
   background: #2f2f2f;
+}
+
+.header {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.header > a {
+  font-size: 1.5em;
+  position: fixed;
+  left: 2.5vw;
+  color: black;
+}
+
+.header > h1 {
+  text-align: center;
 }
