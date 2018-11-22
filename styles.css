@@ -24,12 +24,33 @@ a {
   border-radius: 5px;
   border: 1px solid #2f2f2f;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  color: black;
+  display: flex;
   z-index: 1;
   padding: 5vw 0;
   width: 90%;
+  margin: 5vh 0;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+}
+
+.card > img {
+    width: 80vw;
+}
+
+.card > p {
+  padding-top: 2vh;
+  margin: 0 10vw;
+  text-align: center;
+}
+
+.card > h2 {
+  font-size: 1em;
 }
 
 .title {
+  padding-top: 5vh;
   font-size: 2em;
   color: white;
   font-weight: 300;
@@ -134,94 +155,18 @@ a {
 /* Projects and Experience Pages */
 /*===============================*/
 
-#projects, #experience, #skills {
-  padding-top: 10vh;
+#projects, #experience, #about {
   background: #2f2f2f;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#projects > a, #experience > a {
-  margin: 5vh 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  font-weight: 300;
-}
-
-#projects > a > img, #experience > a > img {
-  width: 80vw;
-}
-
-#projects > a > p, #experience > a > p {
-  padding-top: 2vh;
-  margin: 0 10vw;
-  text-align: center;
-}
-
-#projects > a > h2, #experience > a > h2 {
-  font-size: 1em;
-}
-
-/*=============*/
-/* Contact  Me */
-/*=============*/
-
-#contact {
-  padding: 10vw 0;
-  background: linear-gradient(#fff);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact > img {
-  display: none;
-}
-
-#contact > .title {
-  color: black;
-}
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], input[type=email], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-/* Add a background color and some padding around the form */
-.container {
-    padding: 20px;
-}
-
 /*=============*/
 /* OTHER PAGES */
 /*=============*/
 
-.test {
+.body {
   background: #2f2f2f;
 }
 
@@ -231,6 +176,7 @@ input[type=submit]:hover {
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 8vh;
 }
 
 .header > a {
@@ -241,5 +187,24 @@ input[type=submit]:hover {
 }
 
 .header > h1 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.navlogo {
+  height: 70%;
+}
+
+#about > p {
+  color: white;
+  padding: 2vw 5vw;
   text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  font-weight: 300;
+}
+
+.inlineImage {
+    max-width: 80%;
+    position: relative;
 }
