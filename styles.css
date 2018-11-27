@@ -155,7 +155,7 @@ a {
 /* Projects and Experience Pages */
 /*===============================*/
 
-#projects, #experience, #about {
+#projects, #experience, #aboutYU, #aboutTD {
   background: #2f2f2f;
   display: flex;
   flex-direction: column;
@@ -195,7 +195,7 @@ a {
   height: 70%;
 }
 
-#about > p {
+#aboutYU > div > p, #aboutTD > div > p, #aboutYU > p, #aboutTD > p {
   color: white;
   padding: 2vw 5vw;
   text-align: center;
@@ -207,4 +207,166 @@ a {
 .inlineImage {
     max-width: 80%;
     position: relative;
+}
+
+/*===============*/
+/* DeskTop Styes */
+/*===============*/
+@media (min-width: 800px) {
+
+  .signature {
+    width: 25vw;
+  }
+
+  #aboutme {
+    justify-items: center;
+    align-items: center;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    grid-template-rows: 10vh 50vh;
+    grid-template-areas:
+    "headshot name"
+    "headshot bio"
+  }
+
+  #aboutme > h1 {
+    grid-area: name;
+  }
+
+  #aboutme > .headshot {
+    grid-area: headshot;
+    height: 50vh;
+    width: auto;
+  }
+
+  #aboutme > p {
+    grid-area: bio;
+  }
+
+  #projects {
+    justify-items: center;
+    align-items: center;
+    background: linear-gradient(#000, #2f2f2f 40%);
+    margin: 0;
+    padding-top: 30vh;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 70vh;
+    grid-template-areas:
+    "title title"
+    "TD YU"
+  }
+
+  #projects > h1 {
+    grid-area: title;
+  }
+
+  #projects > .TD {
+    grid-area: TD;
+  }
+
+  #projects > .YU {
+    grid-area: YU;
+  }
+
+  .card {
+    background: grey;
+    border-radius: 5px;
+    border: 1px solid #2f2f2f;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    color: black;
+    display: flex;
+    z-index: 1;
+    padding: 2.5vw 0;
+    width: 65%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+  }
+
+  #aboutTD {
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    grid-template-rows: 90vh;
+  }
+
+  #aboutYU {
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 10vh;
+    display: grid;
+    grid-template-columns: 33.33vw 33.33vw 33.33vw;
+    grid-template-rows: 20vh 20vh auto 10vh auto;
+    grid-template-areas:
+    "YUbio YUbio YUbio"
+    "YUweb YUweb YUweb"
+    "YUevent YUloc YUdash"
+    "YUmobile YUmobile YUmobile"
+    "YUsearch YUreg YUtrack"
+  }
+
+  #aboutYU > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #aboutYU > .YUbio {
+      grid-area: YUbio;
+  }
+
+  #aboutYU > .YUweb {
+      grid-area: YUweb;
+  }
+
+  #aboutYU > .YUevent {
+      grid-area: YUevent;
+  }
+
+  #aboutYU > .YUloc {
+      grid-area: YUloc;
+  }
+
+  #aboutYU > .YUdash {
+      grid-area: YUdash;
+  }
+
+  #aboutYU > .YUmobile {
+      grid-area: YUmobile;
+  }
+
+  #aboutYU > .YUsearch {
+      grid-area: YUsearch;
+  }
+
+  #aboutYU > .YUreg {
+      grid-area: YUreg;
+  }
+
+  #aboutYU > .YUtrack {
+      grid-area: YUtrack;
+  }
+
+  .card > img {
+      width: 20vw;
+  }
+
+  .card > p {
+    padding-top: 2vh;
+    margin: 0 5vw;
+    text-align: center;
+  }
+
+  .card > h2 {
+    font-size: 1em;
+  }
 }
