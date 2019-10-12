@@ -5,12 +5,22 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Titillium Web';
+  font-family: 'Spectral', serif;
 }
 
 h2, h1, p {
   padding: 0;
   margin: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  width: 100%;
 }
 
 a {
@@ -39,14 +49,53 @@ a {
     width: 80vw;
 }
 
-.card > p {
+.card > p{
   padding-top: 2vh;
   margin: 0 10vw;
   text-align: center;
 }
 
-.card > h2 {
+.card > h2, .contentCard > h2 {
   font-size: 1em;
+}
+
+.contentCard > img {
+    width: 50vw;
+    align-self: center;
+}
+
+.contentCard > p {
+}
+
+.contentCard > h2 {
+  font-size: 1em;
+  align-self: center;
+}
+
+.contentCard > * {
+  padding-top: 2vh;
+  margin: 0 10vw;
+}
+
+.underline {
+  width:  20vw;
+  height: 0.1px;
+  background: black;
+}
+
+.contentCard {
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  color: black;
+  display: flex;
+  z-index: 1;
+  padding: 5vw 0;
+  width: 90%;
+  margin: 5vh 0;
+  flex-direction: column;
+  align-items: left;
+  font-weight: 300;
 }
 
 .title {
@@ -69,29 +118,33 @@ a {
   text-decoration: none;
   font-size: 2em;
   margin: 3vh 0;
-  color: #2f2f2f;
+  color: white;
 }
 
 .nav {
   z-index: 2;
   position: fixed;
-  display: none;
-  bottom: 0;
-  width: 80vw;
-  height: 100vh;
-  background: grey;
+  border-top: 2px solid white;
+  bottom: -40vh;
+  width: 100vw;
+  height: 40vh;
+  background: black;
+  -webkit-transition-property: width; /* Safari */
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-property: bottom;
+  transition-duration: 0.2s;
 }
 
 .nav-signature {
   height: 20vw;
-  color: black;
+  color: white;
 }
 
 #nav-toggle {
   position: fixed;
   bottom: 2vw;
   right: 2vw;
-  z-index: 2;
+  z-index: 3;
   font-size: 3em;
   color: white;
 }
@@ -102,11 +155,20 @@ a {
 
 .signature {
   width: 70vw;
+  position: relative;
+  padding-bottom: 50vh;
+}
+
+.menu {
+  visibility: collapse;
 }
 
 #landing {
   height: 100vh;
-  background: linear-gradient(#2f2f2f 50%, black);
+  background-image: url("./images/fractals/landing.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -40vw 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,20 +188,10 @@ a {
 /*===============*/
 
 #aboutme {
-  padding: 10vw 0;
-  background: linear-gradient(#000 60%, #2f2f2f);
+  background: #d8e6e7;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#aboutme > p {
-  padding: 2vw 5vw;
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 2em;
-  font-weight: 300;
-  color: white;
 }
 
 #aboutme > h1 {
@@ -148,7 +200,9 @@ a {
 }
 
 .headshot {
-  width: 80vw;
+  width: 60vw;
+  padding: 0px;
+  border: 1px solid black;
 }
 
 /*===============================*/
@@ -156,7 +210,7 @@ a {
 /*===============================*/
 
 #projects, #experience, #aboutYU, #aboutTD {
-  background: #2f2f2f;
+  background: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,6 +261,8 @@ a {
 .inlineImage {
     max-width: 80%;
     position: relative;
+    display: block;
+    margin: auto;
 }
 
 /*===============*/
@@ -281,6 +337,22 @@ a {
     display: flex;
     z-index: 1;
     padding: 2.5vw 0;
+    width: 65%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+  }
+
+  .contentCard {
+    background: white;
+    border-radius: 1px;
+    border: 1px solid black;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    color: black;
+    display: flex;
+    z-index: 1;
+    padding: 1vw 0;
     width: 65%;
     margin: 0;
     flex-direction: column;
