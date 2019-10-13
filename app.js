@@ -8,7 +8,7 @@ $(document).ready(function(){
       $("#nav-toggle").removeClass("lnr lnr-menu");
       $("#nav-toggle").addClass("lnr lnr-cross");
     } else {
-      $(".nav").css("bottom", "-40vh");
+      $(".nav").css("bottom", "-100%");
       $(".nav").css("box-shadow", "0 0 0");
       $("#nav-toggle").removeClass("lnr lnr-cross");
       $("#nav-toggle").addClass("lnr lnr-menu");
@@ -16,7 +16,7 @@ $(document).ready(function(){
   })
 
   $(".nav>a").click(function(){
-    $(".nav").css("bottom", "-40vh");
+    $(".nav").css("bottom", "-100%");
     $(".nav").css("box-shadow", "0 0 0");
     $("#nav-toggle").removeClass("lnr lnr-cross");
     $("#nav-toggle").addClass("lnr lnr-menu");

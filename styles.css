@@ -30,46 +30,61 @@ a {
 }
 
 .card {
-  background: grey;
+  background: black;
   border-radius: 5px;
-  border: 1px solid #2f2f2f;
+  border: 5px solid #abc9c9;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   color: black;
   display: flex;
   z-index: 1;
-  padding: 5vw 0;
   width: 90%;
   margin: 5vh 0;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   font-weight: 300;
 }
 
 .card > img {
-    width: 80vw;
+    width: 100%;
+    border-bottom: 5px solid #abc9c9;
 }
 
-.card > p{
-  padding-top: 2vh;
-  margin: 0 10vw;
-  text-align: center;
+.copy {
+  margin: 2vh 10vw;
 }
 
-.card > h2, .contentCard > h2 {
+.copy > p{
+  padding: 2vh 0;
+  color: white;
+}
+
+.copy > h2 {
   font-size: 1em;
+  color: white;
+}
+
+.copy > h1 {
+  color: white;
 }
 
 .contentCard > img {
     width: 50vw;
+    border: 5px solid #abc9c9;
     align-self: center;
 }
 
 .contentCard > p {
+  color: white;
 }
 
 .contentCard > h2 {
   font-size: 1em;
+  color: white;
   align-self: center;
+}
+
+.contentCard > h1 {
+  color: white;
 }
 
 .contentCard > * {
@@ -77,15 +92,24 @@ a {
   margin: 0 10vw;
 }
 
-.underline {
-  width:  20vw;
-  height: 0.1px;
+.underline_white {
+  width:  100px;
+  height: 5px;
+  padding: 0;
+  background: white;
+}
+
+.underline_black {
+  width:  100px;
+  height: 5px;
+  padding: 0;
   background: black;
 }
 
 .contentCard {
-  background: white;
+  background: #000;
   border-radius: 2px;
+  border: 5px solid #abc9c9;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   color: black;
   display: flex;
@@ -101,8 +125,7 @@ a {
 .title {
   padding-top: 5vh;
   font-size: 2em;
-  color: white;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -125,14 +148,14 @@ a {
   z-index: 2;
   position: fixed;
   border-top: 2px solid white;
-  bottom: -40vh;
+  bottom: -100%;
   width: 100vw;
-  height: 40vh;
+  height: auto;
   background: black;
   -webkit-transition-property: width; /* Safari */
-  -webkit-transition-duration: 0.2s; /* Safari */
+  -webkit-transition-duration: 0.5s; /* Safari */
   transition-property: bottom;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
 }
 
 .nav-signature {
@@ -141,6 +164,9 @@ a {
 }
 
 #nav-toggle {
+  border: 2px solid white;
+  background: #abc9c9;
+  border-radius: 5px;
   position: fixed;
   bottom: 2vw;
   right: 2vw;
@@ -188,7 +214,7 @@ a {
 /*===============*/
 
 #aboutme {
-  background: #d8e6e7;
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,8 +235,8 @@ a {
 /* Projects and Experience Pages */
 /*===============================*/
 
-#projects, #experience, #aboutYU, #aboutTD {
-  background: #000;
+#projects, #experience, #aboutYU, #aboutTD, #art {
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,11 +247,11 @@ a {
 /*=============*/
 
 .body {
-  background: #2f2f2f;
+  background: white;
 }
 
 .header {
-  background: grey;
+  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,6 +268,7 @@ a {
 
 .header > h1 {
   font-size: 2em;
+  color:white;
   font-weight: 300;
 }
 
@@ -250,7 +277,7 @@ a {
 }
 
 #aboutYU > div > p, #aboutTD > div > p, #aboutYU > p, #aboutTD > p {
-  color: white;
+  color: black;
   padding: 2vw 5vw;
   text-align: center;
   font-size: 1.2em;
@@ -265,9 +292,34 @@ a {
     margin: auto;
 }
 
-/*===============*/
-/* DeskTop Styes */
-/*===============*/
+#artPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+
+.image_slide {
+  width: 100%;
+
+}
+
+.image_slide > img {
+  width: 100%;
+  display: inline;
+  position: relative;
+}
+
+.bkbtn {
+  color: white;
+  background: #abc9c9;
+  border: 2px solid white;
+  z-index: 3;
+}
+
+/*============================================================================*/
+/*------------------------------------------------------------- DeskTop Styes */
+/*============================================================================*/
 @media (min-width: 800px) {
 
   .signature {
@@ -329,7 +381,7 @@ a {
   }
 
   .card {
-    background: grey;
+    background: white;
     border-radius: 5px;
     border: 1px solid #2f2f2f;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
