@@ -242,7 +242,7 @@ a {
 /* Projects and Experience Pages */
 /*===============================*/
 
-#projects, #experience, #aboutYU, #aboutTD, #art {
+#projects, #experience, #aboutYU, #aboutTD, #art, #Research {
   background: #abc9c9;
   display: flex;
   flex-direction: column;
