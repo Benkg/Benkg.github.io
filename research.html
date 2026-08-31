@@ -3,61 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ben G - Research</title>
+  <title>Research — Ben G</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
 </head>
-<body class="body">
+<body data-page="research">
+  <a class="skip" href="#main">Skip to content</a>
 
-  <div class="header">
-    <a href="index.html#research" class="lnr lnr-chevron-left"></a>
-    <h1>Research</h1>
-  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="art.html" data-nav="art">Art</a>
+      <a href="archive.html" data-nav="archive">Archive</a>
+      <a href="index.html#about" data-nav="about">About</a>
+    </nav>
+  </header>
 
-  <span id="nav-toggle" class="lnr lnr-menu"></span>
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="kicker">01 / Optics</p>
+        <h1>Research</h1>
+        <p class="lede">High phase-delay spatial light modulators, and the extra degree of freedom they give a phase mask.</p>
+      </div>
+    </header>
 
-  <nav class="nav">
-    <a href="index.html"><img class="nav-signature" src="./images/path4794.png" alt=""></a>
-    <a href="index.html#aboutme">About Me</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#art">Art</a>
-  </nav>
+    <section class="section flush">
+      <div class="wrap">
+        <div class="research-lead">
+          <div class="plane reveal">
+            <img src="images/research/laser.JPG" alt="Working at an optics bench with a laser">
+          </div>
+          <div class="reveal">
+            <p>My research has focused on high phase delay spatial light modulators (SLMs) and their use in encoding phase masks with capabilities beyond that of a standard 2π SLM. This high-phase SLM enables a new degree of freedom, the phase depth M. Using this parameter, common phase masks may be augmented to exhibit dynamic abilities. We have demonstrated the use of this new parameter on common phase masks such as diffractive lenses, diffractive axicons, and lenslet arrays.</p>
+          </div>
+        </div>
 
-  <section id="aboutTD">
-    <p>
-      My research has focused on high phase delay spatial light modulators (SLMs) and their use
-      in encoding phase masks which have capabilities beyond that of a standard 2&pi; SLM. This high phase
-      SLM enables a new degree of freedom, the phase depth M. Using this parameter, common phase masks
-      may be augmented to exhibit dynamic abilities. We have demonstrated the use of this new parameter
-      on common phase masks such as diffractive lenses, diffractive axicons and lenslet arrays.
-    </p>
+        <div class="section-head">
+          <h2>Papers</h2>
+        </div>
 
-    <a class="card" href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-44-13-3398" target="_blank">
-      <img src="./images/research/SubNy.png" alt="">
-    </a>
+        <div class="papers">
+          <a class="paper plane reveal" href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-44-13-3398" target="_blank" rel="noopener">
+            <img src="images/research/SubNy.png" alt="Optics Letters paper screenshot">
+            <div class="copy">
+              <p class="meta">Optics Letters · 2019</p>
+              <h2>Encoding lenses with focal lengths lower than the Nyquist limit using high phase-modulation displays</h2>
+              <span class="go">Read paper →</span>
+            </div>
+          </a>
 
-    <a class="card" href="https://www.sciencedirect.com/science/article/abs/pii/S0143816619311571" target="_blank">
-      <img src="./images/research/DiffEff.png" alt="">
-    </a>
+          <a class="paper plane reveal" href="https://www.sciencedirect.com/science/article/abs/pii/S0143816619311571" target="_blank" rel="noopener">
+            <img src="images/research/DiffEff.png" alt="Optics and Lasers in Engineering paper screenshot">
+            <div class="copy">
+              <p class="meta">Optics and Lasers in Engineering · 2020</p>
+              <h2>Diffraction efficiency of stepped gratings using high phase-modulation spatial light modulators</h2>
+              <span class="go">Read paper →</span>
+            </div>
+          </a>
 
-    <a class="card" href="https://www.osapublishing.org/osac/abstract.cfm?uri=osac-3-5-1314" target="_blank">
-      <img src="./images/research/Bessel.png" alt="">
-    </a>
+          <a class="paper plane reveal" href="https://www.osapublishing.org/osac/abstract.cfm?uri=osac-3-5-1314" target="_blank" rel="noopener">
+            <img src="images/research/Bessel.png" alt="OSA Continuum paper screenshot">
+            <div class="copy">
+              <p class="meta">OSA Continuum · 2020</p>
+              <h2>Dynamic control of Bessel beams through high-phase diffractive axicons</h2>
+              <span class="go">Read paper →</span>
+            </div>
+          </a>
 
-    <a class="card" href="https://www.osapublishing.org/osac/abstract.cfm?uri=osac-3-6-1679" target="_blank">
-      <img src="./images/research/DoubleRing.png" alt="">
-    </a>
+          <a class="paper plane reveal" href="https://www.osapublishing.org/osac/abstract.cfm?uri=osac-3-6-1679" target="_blank" rel="noopener">
+            <img src="images/research/DoubleRing.png" alt="OSA Continuum paper screenshot">
+            <div class="copy">
+              <p class="meta">OSA Continuum · 2020</p>
+              <h2>Double-ring interference of binary diffractive axicons</h2>
+              <span class="go">Read paper →</span>
+            </div>
+          </a>
 
-    <a class="card" href="https://www.osapublishing.org/josaa/abstract.cfm?uri=josaa-37-9-1417" target="_blank">
-      <img src="./images/research/Lenslet.png" alt="">
-    </a>
+          <a class="paper plane reveal" href="https://www.osapublishing.org/josaa/abstract.cfm?uri=josaa-37-9-1417" target="_blank" rel="noopener">
+            <img src="images/research/Lenslet.png" alt="JOSA A paper screenshot">
+            <div class="copy">
+              <p class="meta">JOSA A · 2020</p>
+              <h2>In-phase sub-Nyquist lenslet arrays encoded onto spatial light modulators</h2>
+              <span class="go">Read paper →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  </section>
+  <footer class="site-footer">
+    <span>Benjamin Kellin Gutierrez</span>
+    <span>bentheg.com</span>
+  </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="prefixfree.min.js"></script>
+  <script src="nav.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

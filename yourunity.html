@@ -3,79 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ben G - YourUnity</title>
+  <title>YourUnity — Ben G</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
 </head>
-<body class="body">
+<body data-page="archive">
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- HEADER -->
-  <div class="header">
-    <a href="index.html#projects" class="lnr lnr-chevron-left"></a>
-    <h1>YourUnity</h1>
-  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="art.html" data-nav="art">Art</a>
+      <a href="archive.html" data-nav="archive">Archive</a>
+      <a href="index.html#about" data-nav="about">About</a>
+    </nav>
+  </header>
 
-  <!-- Nav Menu -->
-  <span id="nav-toggle" class="lnr lnr-menu"></span>
-  <nav class="nav">
-    <a href="index.html"><img class="nav-signature" src="./images/path4794.png" alt=""></a>
-    <a href="index.html#aboutme">About Me</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#art">Art</a>
-  </nav>
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="kicker">Archive / YourUnity</p>
+        <h1>YourUnity</h1>
+        <p class="lede">A collaborative platform for discovering local community service opportunities. Built over a year and five months by three SDSU students. A working product, later set aside after little traction from the community.</p>
+      </div>
+    </header>
 
-  <section id="aboutYU">
-    <p class="YUbio">
-      This project was a collaborative effort to design and launch a platform for discovering local community
-      service opportunities. The team consisted of 3 SDSU students who worked on the project for 1 year and 5 months.
-      We created a working product but chose to abandon the project after little traction from the community.
-    </p></br>
+    <section class="section flush">
+      <div class="wrap">
+        <div class="prose">
+          <p>The website enabled organizations to manage and publicize their volunteer events. The mobile application (iOS and Android) let users connect with their community.</p>
+        </div>
 
-    <hr>
+        <figure class="shot reveal">
+          <img src="images/yourunity/CreateEvent.png" alt="Create event screen">
+          <p>Create an event, specifying date, time, location, and description.</p>
+        </figure>
 
-    <p class="YUweb">Our website enabled organizations to manage and publicize their volunteer events.</p></br>
+        <figure class="shot reveal">
+          <img src="images/yourunity/Gmaps.png" alt="Google Maps location picker">
+          <p>Refine and confirm location using the Google Maps API. GPS coordinates were allowed for unaddressed locations.</p>
+        </figure>
 
-    <div class="YUevent">
-      <img class="inlineImage" src="./images/yourunity/CreateEvent.png" alt="">
-      <p>Create an event, specifiying date, time, location and description.</p></br>
-    </div>
+        <figure class="shot reveal">
+          <img src="images/yourunity/Dashboard.png" alt="Organization dashboard">
+          <p>Manage and view all upcoming events. View statistics for past events.</p>
+        </figure>
 
-    <div class="YUloc">
-      <img class="inlineImage" src="./images/yourunity/Gmaps.png" alt="">
-      <p>Refine and confirm location using google maps API. GPS coordinates were allowed for unaddressed locations.</p></br>
-    </div>
+        <figure class="shot reveal">
+          <img src="images/yourunity/AllEvents.png" alt="Mobile event search">
+          <p>Search events by filter.</p>
+        </figure>
 
-    <div class="YUdash">
-      <img class="inlineImage" src="./images/yourunity/Dashboard.png" alt="">
-      <p>Manage and view all upcoming events. View statistics for past events.</p></br>
-    </div>
+        <figure class="shot reveal">
+          <img src="images/yourunity/Register.png" alt="Event registration">
+          <p>Register for events to receive updates and waivers.</p>
+        </figure>
 
+        <figure class="shot reveal">
+          <img src="images/yourunity/YourEvents.png" alt="Tracked volunteer hours">
+          <p>Seamlessly track volunteer hours.</p>
+        </figure>
+      </div>
+    </section>
+  </main>
 
-    <hr>
+  <footer class="site-footer">
+    <span>Benjamin Kellin Gutierrez</span>
+    <span>bentheg.com</span>
+  </footer>
 
-    <p class="YUmobile">The mobile application (IOS and Android) allowed users to connect with their community.</p>
-
-    <div class="YUsearch">
-      <img class="inlineImage" src="./images/yourunity/AllEvents.png" alt="">
-      <p>Search events by filter.</p></br>
-    </div>
-
-    <div class="YUreg">
-      <img class="inlineImage" src="./images/yourunity/Register.png" alt="">
-      <p>Register to events to receive updates and waivers.</p></br>
-    </div>
-
-    <div class="YUtrack">
-      <img class="inlineImage" src="./images/yourunity/YourEvents.png" alt="">
-      <p>Seemlessly track volunteer hours.</p></br>
-    </div>
-
-  </section>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="prefixfree.min.js"></script>
+  <script src="nav.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

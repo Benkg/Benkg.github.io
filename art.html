@@ -3,54 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ben G - Art</title>
+  <title>Art — Ben G</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
 </head>
-<body class="body">
+<body data-page="art">
+  <a class="skip" href="#main">Skip to content</a>
 
-  <div class="header">
-    <a href="index.html#art" class="bkbtn lnr lnr-chevron-left"></a>
-    <h1>Fractals</h1>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="art.html" data-nav="art">Art</a>
+      <a href="archive.html" data-nav="archive">Archive</a>
+      <a href="index.html#about" data-nav="about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="kicker">02 / Fractals</p>
+        <h1>Art</h1>
+        <p class="lede">Mathematics contains immense beauty and elegance in its symmetry. These images come from iterating complex functions until a divergence develops between bound and unbound results, then colorizing the gradient — the same method used to image the Mandelbrot set.</p>
+      </div>
+    </header>
+
+    <section class="section flush">
+      <div class="wrap">
+        <div class="art-intro">
+          <p class="kicker">Gallery · click to slide</p>
+        </div>
+
+        <div class="gallery">
+          <button class="gallery-item" type="button" data-src="images/fractals/landing.png" data-title="Landing">
+            <img src="images/fractals/landing.png" alt="Landing" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/leaves.png" data-title="Leaves">
+            <img src="images/fractals/leaves.png" alt="Leaves" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/mandala.png" data-title="Mandala">
+            <img src="images/fractals/mandala.png" alt="Mandala" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/mandala_1.png" data-title="Mandala II">
+            <img src="images/fractals/mandala_1.png" alt="Mandala II" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/manta.png" data-title="Manta">
+            <img src="images/fractals/manta.png" alt="Manta" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/Manta_1.png" data-title="Manta II">
+            <img src="images/fractals/Manta_1.png" alt="Manta II" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/diagonal.png" data-title="Diagonal">
+            <img src="images/fractals/diagonal.png" alt="Diagonal" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/diagonal_1.png" data-title="Diagonal II">
+            <img src="images/fractals/diagonal_1.png" alt="Diagonal II" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/spider1.png" data-title="Spider">
+            <img src="images/fractals/spider1.png" alt="Spider" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/cirle.png" data-title="Circle">
+            <img src="images/fractals/cirle.png" alt="Circle" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/idk1.png" data-title="Untitled I">
+            <img src="images/fractals/idk1.png" alt="Untitled I" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/idk2.png" data-title="Untitled II">
+            <img src="images/fractals/idk2.png" alt="Untitled II" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/HandOfGod1_1.png" data-title="Hand of God">
+            <img src="images/fractals/HandOfGod1_1.png" alt="Hand of God" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/river1.png" data-title="River">
+            <img src="images/fractals/river1.png" alt="River" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/sick1.png" data-title="Untitled III">
+            <img src="images/fractals/sick1.png" alt="Untitled III" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/sinz1.png" data-title="sin(z)">
+            <img src="images/fractals/sinz1.png" alt="sin(z)" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/cosz1.png" data-title="cos(z)">
+            <img src="images/fractals/cosz1.png" alt="cos(z)" loading="lazy">
+          </button>
+          <button class="gallery-item" type="button" data-src="images/fractals/ettz1.png" data-title="ett(z)">
+            <img src="images/fractals/ettz1.png" alt="ett(z)" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="stage" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Artwork viewer">
+    <div class="stage-bar">
+      <span class="stage-count">1 / 18</span>
+      <button class="stage-close" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="stage-viewport">
+      <button class="stage-nav prev" type="button" aria-label="Previous">←</button>
+      <div class="stage-frame">
+        <img class="stage-img is-prev" alt="">
+        <img class="stage-img is-current" alt="">
+        <img class="stage-img is-next" alt="">
+      </div>
+      <button class="stage-nav next" type="button" aria-label="Next">→</button>
+    </div>
+    <p class="stage-caption"></p>
+    <div class="stage-strip"></div>
   </div>
 
-  <span id="nav-toggle" class="lnr lnr-menu"></span>
+  <footer class="site-footer">
+    <span>Benjamin Kellin Gutierrez</span>
+    <span>bentheg.com</span>
+  </footer>
 
-  <nav class="nav">
-    <a href="index.html"><img class="nav-signature" src="./images/path4794.png" alt=""></a>
-    <a href="index.html#aboutme">About Me</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#art">Art</a>
-  </nav>
-
-  <section id="artPage">
-    <div class = "image_slide">
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/idk1.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/landing.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/mandala_1.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/manta.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/Manta_1.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/diagonal.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/spider1.png" alt=""></a>
-      <a href="https://www.instagram.com/spatialcontents/"><img src="./images/fractals/cirle.png" alt=""></a>
-    </div>
-
-    <!-- <div class="fullFrame">
-      <img src="./images/fractals/idk1.png" alt="">
-      <img src="./images/fractals/landing.png" alt="">
-      <img src="./images/fractals/mandala_1.png" alt="">
-      <img src="./images/fractals/manta.png" alt="">
-      <img src="./images/fractals/Manta_1.png" alt="">
-      <img src="./images/fractals/diagonal.png" alt="">
-      <img src="./images/fractals/spider1.png" alt="">
-      <img src="./images/fractals/cirle.png" alt="">
-    </div> -->
-  </section>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="prefixfree.min.js"></script>
+  <script src="nav.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

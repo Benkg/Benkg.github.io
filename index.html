@@ -1,130 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121264728-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-121264728-1');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ben G</title>
+  <title>Ben G — Optics &amp; Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Spectral:200,300,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="home">
+  <a class="skip" href="#main">Skip to content</a>
 
-  <span id="nav-toggle" class="lnr lnr-menu"></span>
-
-  <nav class="nav">
-    <a href="index.html"><img class="nav-signature" src="./images/path4794.png" alt=""></a>
-    <a href="#aboutme">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#art">Art</a>
-    <!-- <a href="#contact">Contact</a> -->
-  </nav>
-
-  <section id="landing">
-    <nav class="menu">
-      <a href="index.html#aboutme">About Me</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#publications">Publications</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Home"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="art.html" data-nav="art">Art</a>
+      <a href="archive.html" data-nav="archive">Archive</a>
+      <a href="index.html#about" data-nav="about">About</a>
     </nav>
-    <img class="signature" src="./images/path4794.png" alt="">
-  </section>
+  </header>
 
-  <section id="aboutme">
-    <div class="contentCard">
-      <img class="headshot" src="./images/headshotMobile.JPG" alt="headshot">
-      <h1>Benjamin Kellin Gutierrez</h1>
-      <div class = "underline_white"></div>
-      <p>Undergradte degree in Electrical Engineering with a minor in Physics from San Diego State University.</br>
-        My interests include education, mathematics, optics, and power electronics.
-        The purpose of this website is to provide me with a medium through which I can document my work.</br>
-        If you would like to get in contact, feel free to <a href="mailto:benkgutz@gmail.com">email me</a>.
-      </p>
-    </div>
-  </section>
-
-  <hr>
-
-  <section id="projects">
-    <h1 class="title">PROJECTS</h1>
-    <div class = "underline_black"></div>
-
-    <div class="projectCards">
-      <a href="tessedyn.html" class="TD card">
-        <img src="./images/tessedyn/IMG-4976.JPG" alt="">
-        <div class = "copy">
-          <h1>brixbo</h1>
-          <hr>
-          <h2>(12/18/17 - current)</h2>
-          <p>The goal of this project is to create a modular energy storage system that can
-            be scaled up to meet the needs of a variety of applications.</p>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-floor" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Photonics Research · Art · Personal Projects</p>
+          <h1>Benjamin Kellin Gutierrez</h1>
+          <div class="line"></div>
         </div>
-      </a>
-
-      <a href="yourunity.html" class="YU card">
-        <img src="./images/IMG-4270.PNG" alt="">
-        <div class = "copy">
-          <h1>YourUnity</h1>
-          <hr>
-          <h2>(11/18/16 - 4/6/18) [1 yr 5 mos]</h2>
-          <p>A platform for disocvering local community service opportunities.
-            Comprised of a website for organizations to post their volunteer events
-            and a mobile application for users to connect with their community.</p>
+        <div class="hero-gem-wrap">
+          <div class="hero-gem">
+            <img src="images/fractals/landing.png" alt="">
+          </div>
+          <img class="hero-sig" src="images/path4794.png" alt="">
         </div>
-      </a>
-    </div>
-
-  </section>
-
-    <hr>
-
-    <section id="art">
-      <h1 class="title">ART</h1>
-      <div class = "underline_black"></div>
-      <a href="art.html" class="ART card">
-        <img src="./images/fractals/leaves.png" alt="">
-        <div class = "copy">
-          <h1>Complex Fractals</h1>
-          <hr>
-          <p>Mathematics contain immense beauty and elegance in terms of symmetry.
-          This is my attempt to reveil this beauty through the visual sense. To do this, complex functions are iterated until a
-          a reasonable divergence developes between bound and unbound results. Finally, this gradient gets colorized producing the
-          pattern you see. This technique of producing fractals is the same method used in imaging the Mandelbrot set.</p>
-        </div>
-      </a>
+      </div>
     </section>
 
-    <hr>
-
-    <section id="Research">
-      <h1 class="title">RESEARCH</h1>
-      <div class = "underline_black"></div>
-      <a href="research.html" class="RS card">
-        <img src="./images/research/laser.JPG" alt="">
-        <div class = "copy">
-          <h1>Optics Research</h1>
-          <hr>
-          <p>
-            My past work has focused on the field of diffractive optics.
-            I helped develop the first research published using high-phase depth
-            spatial light modulators (SLMs).
-          </p>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Two planes</h2>
         </div>
-      </a>
+        <div class="portals">
+          <a class="portal plane reveal" href="research.html">
+            <div class="portal-media">
+              <img src="images/research/laser.JPG" alt="Optics bench with a laser">
+            </div>
+            <div class="portal-label">Research <span>01</span></div>
+          </a>
+          <a class="portal plane reveal" href="art.html">
+            <div class="portal-media">
+              <img src="images/fractals/leaves.png" alt="Colorized complex fractal">
+            </div>
+            <div class="portal-label">Art <span>02</span></div>
+          </a>
+        </div>
+      </div>
     </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="prefixfree.min.js"></script>
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>About</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo plane reveal">
+            <img src="images/headshot.JPG" alt="Portrait of Benjamin Kellin Gutierrez">
+          </div>
+          <div class="about-copy reveal">
+            <p>Undergraduate degree in Electrical Engineering with a minor in Physics from San Diego State University.</p>
+            <p>My interests include education, mathematics, optics, and power electronics. The purpose of this website is to provide a medium through which I can document my work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Archive</h2>
+          <a href="archive.html">View all</a>
+        </div>
+        <div class="archive-grid">
+          <a class="archive-card plane reveal" href="tessedyn.html">
+            <img src="images/brixbo/bbLanding.png" alt="brixbo">
+            <div class="copy">
+              <p class="meta">2017 — 2019</p>
+              <h3>brixbo</h3>
+              <p>Modular energy storage, scaled from a cell to a city.</p>
+            </div>
+          </a>
+          <a class="archive-card plane reveal" href="yourunity.html">
+            <img src="images/IMG-4270.PNG" alt="YourUnity">
+            <div class="copy">
+              <p class="meta">2016 — 2018</p>
+              <h3>YourUnity</h3>
+              <p>A platform for discovering local community service.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Benjamin Kellin Gutierrez</span>
+    <span>bentheg.com</span>
+  </footer>
+
+  <script src="nav.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
