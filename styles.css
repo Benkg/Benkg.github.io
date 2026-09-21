@@ -619,7 +619,36 @@ main {
 .research-lead {
   display: grid;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
+}
+
+.research-lead .reveal p + p {
+  margin-top: 1rem;
+}
+
+.research-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  margin: 0 0 2.75rem;
+  font-family: var(--display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.research-toc a {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.research-block {
+  scroll-margin-top: calc(var(--header-h) + 0.85rem);
+}
+
+.research-block + .research-block {
+  margin-top: 3.75rem;
 }
 
 .research-lead img {
