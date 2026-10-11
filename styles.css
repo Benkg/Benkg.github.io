@@ -321,6 +321,11 @@ main {
   color: var(--mute);
 }
 
+.site-footer a {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
 /* Geometric plane */
 
 .plane {
@@ -528,8 +533,7 @@ main {
 
 .about-grid {
   display: grid;
-  gap: 2rem;
-  align-items: start;
+  gap: 1.75rem;
 }
 
 .about-photo {
@@ -538,26 +542,11 @@ main {
 
 .about-photo img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: 50% 15%;
-  filter: grayscale(0.15);
+  height: auto;
 }
 
 .about-copy p + p {
   margin-top: 1rem;
-}
-
-@media (min-width: 800px) {
-  .about-grid {
-    grid-template-columns: 0.42fr 0.58fr;
-    gap: 3.5rem;
-    align-items: center;
-  }
-
-  .about-photo {
-    transform: perspective(1200px) rotateY(6deg);
-  }
 }
 
 /* ========== Archive cards ========== */
