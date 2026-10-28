@@ -38,6 +38,7 @@
       <div class="wrap">
         <div class="art-intro">
           <p class="kicker">Gallery · click to slide</p>
+          <button class="generator-open" type="button" id="open-fractal">Fractal generator</button>
         </div>
 
         <div class="gallery">
@@ -118,6 +119,56 @@
     <div class="stage-strip"></div>
   </div>
 
+  <div class="fractal" id="fractal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="fractal-title" tabindex="-1">
+    <header class="fractal-bar">
+      <span class="fractal-title" id="fractal-title">Fractal generator</span>
+      <div class="fractal-actions">
+        <button type="button" id="fractal-reset">Reset view</button>
+        <button type="button" id="fractal-close">Close</button>
+      </div>
+    </header>
+    <div class="fractal-body">
+      <aside class="fractal-side">
+        <p class="fractal-note">Each iteration runs these in order, then repeats.</p>
+        <div id="fractal-eqs"></div>
+        <button class="fractal-add" type="button" id="fractal-add">Add equation</button>
+        <div class="fractal-controls">
+          <div class="fractal-field">
+            <label for="fractal-iter">Iterations</label>
+            <div class="fractal-iter-row">
+              <input id="fractal-iter" type="range" min="1" max="500" value="80">
+              <input id="fractal-iter-num" type="number" min="1" max="500" value="80" inputmode="numeric">
+            </div>
+          </div>
+          <div class="fractal-field">
+            <label for="fractal-res">Grid resolution</label>
+            <select id="fractal-res">
+              <option value="240">240</option>
+              <option value="360">360</option>
+              <option value="480" selected>480</option>
+              <option value="720">720</option>
+              <option value="1080">1080</option>
+            </select>
+          </div>
+          <div class="fractal-field">
+            <label for="fractal-cmap">Colormap</label>
+            <div class="fractal-cmap">
+              <select id="fractal-cmap"></select>
+              <span class="fractal-swatch" id="fractal-swatch" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="fractal-view">
+        <div class="fractal-stage" id="fractal-stage">
+          <canvas id="fractal-canvas" aria-label="Fractal image"></canvas>
+        </div>
+        <p class="fractal-hint" id="fractal-hint">Drag to move · scroll to zoom · shift-scroll for a fine zoom · click to center</p>
+        <p class="fractal-status" id="fractal-status" role="status">80 iter · 480px · viridis</p>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <span>Benjamin Kellin Gutierrez</span>
     <a href="https://www.linkedin.com/in/benkgutz/" target="_blank" rel="noopener">LinkedIn</a>
@@ -125,5 +176,7 @@
 
   <script src="nav.js"></script>
   <script src="app.js"></script>
+  <script src="fractal-maps.js"></script>
+  <script src="fractal.js"></script>
 </body>
 </html>
