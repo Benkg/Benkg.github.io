@@ -9,7 +9,12 @@
   ];
 
   var FUNCS = {
-    sin: 1, cos: 1, tan: 1, sinh: 1, cosh: 1, tanh: 1,
+    sin: 1, cos: 1, tan: 1,
+    asin: 1, acos: 1, atan: 1,
+    arcsin: 1, arccos: 1, arctan: 1,
+    sinh: 1, cosh: 1, tanh: 1,
+    asinh: 1, acosh: 1, atanh: 1,
+    arcsinh: 1, arccosh: 1, arctanh: 1,
     exp: 1, log: 1, sqrt: 1, abs: 1, conj: 1, re: 1, im: 1
   };
 
@@ -292,10 +297,13 @@
     }
 
     function emitCall(name, arg) {
+      if (name.indexOf("arc") === 0) name = "a" + name.slice(3);
       var re = temp();
       var im = temp();
       var ar = arg.re;
       var ai = arg.im;
+      var one = { re: "1", im: "0" };
+      var iUnit = { re: "0", im: "1" };
       if (name === "sin") {
         lines.push(re + " = Math.sin(" + ar + ") * Math.cosh(" + ai + ");");
         lines.push(im + " = Math.cos(" + ar + ") * Math.sinh(" + ai + ");");
@@ -312,6 +320,40 @@
         lines.push(im + " = Math.sinh(" + ar + ") * Math.sin(" + ai + ");");
       } else if (name === "tanh") {
         return div(emitCall("sinh", arg), emitCall("cosh", arg));
+      } else if (name === "asin") {
+        var asinSq = mul(arg, arg);
+        var rawAsin = mul({ re: "0", im: "-1" }, emitCall("log", add(emitCall("sqrt", sub(one, asinSq)), mul(iUnit, arg))));
+        var asinRe = temp();
+        var asinIm = temp();
+        lines.push(asinRe + " = " + rawAsin.re + ";");
+        lines.push(asinIm + " = (" + ai + " === 0 && " + ar + " > 1) ? Math.abs(" + rawAsin.im + ") : " + rawAsin.im + ";");
+        return { re: asinRe, im: asinIm };
+      } else if (name === "acos") {
+        var asinVal = emitCall("asin", arg);
+        var acosRe = temp();
+        var acosIm = temp();
+        lines.push(acosRe + " = Math.PI / 2 - (" + asinVal.re + ");");
+        lines.push(acosIm + " = -(" + asinVal.im + ");");
+        return { re: acosRe, im: acosIm };
+      } else if (name === "atan") {
+        var rawAtan = mul({ re: "0", im: "0.5" }, emitCall("log", div(add(iUnit, arg), sub(iUnit, arg))));
+        var atanRe = temp();
+        var atanIm = temp();
+        lines.push(atanRe + " = (" + ar + " === 0 && Math.abs(" + ai + ") > 1) ? Math.abs(" + rawAtan.re + ") : " + rawAtan.re + ";");
+        lines.push(atanIm + " = " + rawAtan.im + ";");
+        return { re: atanRe, im: atanIm };
+      } else if (name === "asinh") {
+        var asinhSq = mul(arg, arg);
+        var rawAsinh = emitCall("log", add(arg, emitCall("sqrt", add(asinhSq, one))));
+        var asinhRe = temp();
+        var asinhIm = temp();
+        lines.push(asinhRe + " = (" + ar + " === 0 && Math.abs(" + ai + ") > 1) ? Math.abs(" + rawAsinh.re + ") : " + rawAsinh.re + ";");
+        lines.push(asinhIm + " = " + rawAsinh.im + ";");
+        return { re: asinhRe, im: asinhIm };
+      } else if (name === "acosh") {
+        return emitCall("log", add(arg, mul(emitCall("sqrt", sub(arg, one)), emitCall("sqrt", add(arg, one)))));
+      } else if (name === "atanh") {
+        return mul({ re: "0.5", im: "0" }, emitCall("log", div(add(one, arg), sub(one, arg))));
       } else if (name === "exp") {
         var e = temp();
         lines.push(e + " = Math.exp(" + ar + ");");
@@ -319,7 +361,7 @@
         lines.push(im + " = " + e + " * Math.sin(" + ai + ");");
       } else if (name === "log") {
         lines.push(re + " = 0.5 * Math.log(" + ar + " * " + ar + " + " + ai + " * " + ai + ");");
-        lines.push(im + " = Math.atan2(" + ai + ", " + ar + ");");
+        lines.push(im + " = Math.atan2(" + ai + " === 0 ? 0 : " + ai + ", " + ar + ");");
       } else if (name === "sqrt") {
         var m = temp();
         lines.push(m + " = Math.hypot(" + ar + ", " + ai + ");");
